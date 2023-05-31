@@ -1,7 +1,9 @@
 nav {
-  background-color: blanchedalmond;
-  position: sticky;
-  top: 0;
+  background-image: linear-gradient(
+    180deg,
+    rgba(255, 235, 205, 1) 0%,
+    rgba(255, 255, 255, 0.5) 64%
+  );
 }
 .nav-logo {
   width: 65%;
@@ -13,9 +15,14 @@ nav {
 .hero {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  background-color: bisque;
-  padding: 20px;
-  margin: 20px;
-  border-radius: 7px;
-  position: sticky;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.2),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url("/Media/MntnRng.jpg");
+
+  padding: 80px;
 }
