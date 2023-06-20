@@ -1,75 +1,82 @@
 body {
   margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  color: aliceblue;
+  overflow-y: hidden;
 }
 nav {
   background-image: linear-gradient(
     180deg,
     rgba(255, 235, 205, 1) 0%,
-    rgba(255, 255, 255, 0.5) 64%
+    rgba(255, 255, 255, 0.342) 64%
   );
 }
 .nav-logo {
   width: 65%;
   padding-left: 10px;
 }
-.wrapper {
+.parallax_wrapper {
   height: 100vh;
-  overflow-y: auto;
+  font-size: 4em;
   overflow-x: hidden;
-  perspective: 10px;
-  background-color: #6b847d;
+  overflow-y: auto;
+  perspective: 300px;
 }
-header {
+.intro_screen {
+  height: 100vh;
+  background-color: aquamarine;
+  background-image: url("Header.JPG");
+}
+.outro_screen {
+  height: 100vh;
+  background-color: teal;
+}
+.parallax_group {
   position: relative;
-  display: flex;
-  justify-content: left;
-  align-items: center;
-  height: 100%;
+  height: 100vh;
   transform-style: preserve-3d;
-  z-index: -1;
 }
-.background,
-.middleground,
-.frontground {
+.parallax_layer {
   position: absolute;
+  inset: auto;
+}
+.intro_screen,
+.outro_screen,
+.parallax_group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.base_layer {
+  transform: translateZ(-300px) scale(2);
   height: 100%;
   width: 100%;
-  object-fit: cover;
+  text-align: center;
+  justify-content: center;
+}
+.mid_layer {
+  transform: translateZ(0);
+  height: 100%;
+}
+.top_layer {
+  transform: translateZ(0.3);
+}
+#intro {
+  z-index: 0;
+}
+#group-1 {
   z-index: -1;
 }
-.background {
-  transform: translateZ(-10px) scale(2);
+#group-1 > .base_layer {
+  background-color: blueviolet;
 }
-.middleground {
-  transform: translateZ(-5px) scale(1.5);
+#group-2 {
+  z-index: auto;
 }
-.frontground {
-  transform: translateZ(-1px) scale(1.1);
+#group-2 > .mid_layer {
+  background-color: yellowgreen;
 }
-section {
-  font-size: 2rem;
-  padding: 2rem;
-  background-color: #6b847d;
-  color: aliceblue;
-}
-.inner-wrapper {
-  padding: 100px 50px;
-  max-width: 400px;
-  margin-left: 20px;
-  --background-color: #6b847d;
-}
-.title {
-  font-size: 50px;
-  font-family: Judson;
-  font-weight: 900;
-  color: aliceblue;
-  text-shadow: 0 0 6px #173128;
-}
-.about-us-img {
-  position: relative;
-  height: 70%;
-  width: 60%;
-  margin-left: 40px;
-  border-radius: 50%;
-  border: solid 1px #173128;
+#outro {
+  z-index: auto;
 }
