@@ -25,8 +25,13 @@ nav {
 }
 .intro_screen {
   height: 100vh;
+  background-image: url("Media/Header.JPG");
+  background-position: cover;
   background-color: aquamarine;
-  background-image: url("Header.JPG");
+}
+
+.about-us-img {
+  width: 90%;
 }
 .outro_screen {
   height: 100vh;
