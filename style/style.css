@@ -30,6 +30,7 @@ body {
 .intro_screen {
   height: 100vh;
   background-color: #39585b;
+  z-index: 0;
 }
 .background {
   position: absolute;
@@ -39,10 +40,10 @@ body {
   z-index: -1;
 }
 .about_us {
-  background-color: #142751a9;
+  background-color: #1427516e;
   padding: 60px;
   width: 70%;
-  height: 50%;
+  height: 40%;
   border-radius: 7px;
 }
 .container {
@@ -52,7 +53,7 @@ body {
   align-items: center;
 }
 .about_us p {
-  font-size: 15px;
+  font-size: 17px;
 }
 .us-background {
   height: 100%;
@@ -62,7 +63,7 @@ body {
   transform: translateZ(-5px) scale(1);
 }
 .about-us-img {
-  width: 60%;
+  width: 90%;
   border-radius: 50%;
 }
 
@@ -87,7 +88,9 @@ body {
   position: absolute;
   inset: auto;
 }
-
+.adventure-img {
+  transform: translate(-30px) scale(1);
+}
 .base_layer {
   transform: translateZ(-300px) scale(2);
   height: 100%;
@@ -99,13 +102,11 @@ body {
 .mid_layer {
   transform: translateZ(0);
 }
+
 .top_layer {
-  transform: translateZ(0.3);
+  transform: translateZ(30px);
 }
 
-#intro {
-  z-index: 0;
-}
 #group-1 {
   z-index: -1;
 }
@@ -116,7 +117,6 @@ body {
   z-index: auto;
 }
 #group-2 > .mid_layer {
-  background-color: yellowgreen;
 }
 #outro {
   z-index: auto;
