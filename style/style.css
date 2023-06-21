@@ -23,6 +23,7 @@ body {
 .parallax_wrapper {
   height: 100vh;
   font-size: 4em;
+  text-shadow: 0 0 5px #000;
   overflow-x: hidden;
   overflow-y: auto;
   perspective: 300px;
@@ -66,15 +67,17 @@ body {
   width: 90%;
   border-radius: 50%;
 }
-
+h2 {
+  font-size: 40px;
+}
 .title {
   text-shadow: 0 0 5px #000;
-  font-size: 50px;
+  font-size: 55px;
   text-align: center;
 }
 .outro_screen {
   height: 100vh;
-  background-color: teal;
+  background-color: #39585b;
 }
 .parallax_group {
   position: relative;
@@ -102,11 +105,23 @@ body {
 .mid_layer {
   transform: translateZ(0);
 }
+.backdrop {
+  transform: translateZ(-10px);
 
-.top_layer {
-  transform: translateZ(30px);
+  width: 100%;
+  height: 80%;
 }
-
+.top_layer {
+  transform: translateZ(40px);
+}
+.zach-peyto-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+  transform: translateZ(-10px) scale(1.1);
+  padding-bottom: 40px;
+}
 #group-1 {
   z-index: -1;
 }
@@ -116,8 +131,7 @@ body {
 #group-2 {
   z-index: auto;
 }
-#group-2 > .mid_layer {
-}
+
 #outro {
   z-index: auto;
 }
