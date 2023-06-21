@@ -18,7 +18,7 @@ nav {
 body {
   font-family: "Poppins", sans-serif;
   color: aliceblue;
-
+  overflow-y: hidden;
   background-color: #39585b;
 }
 .parallax_wrapper {
@@ -225,6 +225,32 @@ h2 {
 .footer span {
   font-weight: 800;
 }
+.faders {
+  opacity: 0;
+  transition: all 1s;
+}
+
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transition: all 1s;
+  transform: translateX(-100%);
+}
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translate(0);
+}
+.link:nth-child(2) {
+  transition-delay: 200ms;
+}
+.link:nth-child(3) {
+  transition-delay: 500ms;
+}
+.link:nth-child(4) {
+  transition-delay: 700ms;
+}
+
 #group-1 {
   z-index: -1;
 }
