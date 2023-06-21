@@ -1,9 +1,0 @@
-colors
-
-dark green #5F7161
-moss green #809A6F
-earth(brown) #876445
-soft blue # B7C4CF
-ocean blue #02475E
-granite white #E6E6E6
-mushroom #E3D9CA

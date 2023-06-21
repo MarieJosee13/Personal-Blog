@@ -1,20 +1,24 @@
-body {
+* {
   margin: 0;
   padding: 0;
-  font-family: "Poppins", sans-serif;
-  color: aliceblue;
-  overflow-y: hidden;
 }
+
 nav {
   background-image: linear-gradient(
     180deg,
-    rgba(255, 235, 205, 1) 0%,
-    rgba(255, 255, 255, 0.342) 64%
+    rgb(205, 249, 255) 0%,
+    rgb(255, 255, 255) 60%
   );
 }
 .nav-logo {
   width: 65%;
   padding-left: 10px;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  color: aliceblue;
+  overflow-y: hidden;
+  background-color: #39585b;
 }
 .parallax_wrapper {
   height: 100vh;
@@ -25,13 +29,41 @@ nav {
 }
 .intro_screen {
   height: 100vh;
-  background-image: url("Media/Header.JPG");
-  background-position: cover;
-  background-color: aquamarine;
+  background-color: #39585b;
+}
+.background {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+.about_us {
+  background-color: #142751a9;
+  padding: 60px;
+  width: 100%;
+  height: 50%;
 }
 
+.about_us p {
+  font-size: 15px;
+}
+.us-background {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+  transform: translateZ(-5px) scale(1);
+}
 .about-us-img {
-  width: 90%;
+  width: 60%;
+  border-radius: 50%;
+}
+
+.title {
+  text-shadow: 0 0 5px #000;
+  font-size: 50px;
+  text-align: center;
 }
 .outro_screen {
   height: 100vh;
@@ -41,18 +73,15 @@ nav {
   position: relative;
   height: 100vh;
   transform-style: preserve-3d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .parallax_layer {
   position: absolute;
   inset: auto;
 }
-.intro_screen,
-.outro_screen,
-.parallax_group {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 .base_layer {
   transform: translateZ(-300px) scale(2);
   height: 100%;
@@ -60,13 +89,14 @@ nav {
   text-align: center;
   justify-content: center;
 }
+
 .mid_layer {
   transform: translateZ(0);
-  height: 100%;
 }
 .top_layer {
   transform: translateZ(0.3);
 }
+
 #intro {
   z-index: 0;
 }
@@ -74,7 +104,7 @@ nav {
   z-index: -1;
 }
 #group-1 > .base_layer {
-  background-color: blueviolet;
+  background-color: #39585b;
 }
 #group-2 {
   z-index: auto;
